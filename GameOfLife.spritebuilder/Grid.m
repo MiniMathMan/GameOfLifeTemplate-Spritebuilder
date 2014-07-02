@@ -11,7 +11,7 @@ static const int GRID_COLUMNS = 10;
     float _cellHeight;
 }
 
-- (void)onEnter2
+- (void)onEnter //Built in
 {
     [super onEnter];// Help !!!
     
@@ -21,7 +21,7 @@ static const int GRID_COLUMNS = 10;
     self.userInteractionEnabled = YES;
 }
 
-- (void)setupGrid
+- (void)setupGrid //Homebrew
 {
     // divide the grid's size by the number of columns/rows to figure out the right width and height of each cell
     _cellWidth = self.contentSize.width / GRID_COLUMNS;
@@ -56,7 +56,7 @@ static const int GRID_COLUMNS = 10;
     }
 }
 
-- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event //Built in
 {
     //get the x,y coordinates of the touch
     CGPoint touchLocation = [touch locationInNode:self];
@@ -68,7 +68,7 @@ static const int GRID_COLUMNS = 10;
     creature.isAlive = !creature.isAlive;
 }
 
-- (Creature *)creatureForTouchPosition:(CGPoint)touchPosition
+- (Creature *)creatureForTouchPosition:(CGPoint)touchPosition //Homebrew
 {
     //get the row and column that was touched, return the Creature inside the corresponding cell
     int _row = touchPosition.y/_cellHeight;

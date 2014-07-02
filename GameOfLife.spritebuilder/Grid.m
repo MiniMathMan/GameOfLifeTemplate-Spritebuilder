@@ -11,9 +11,9 @@ static const int GRID_COLUMNS = 10;
     float _cellHeight;
 }
 
-- (void)onEnter
+- (void)onEnter2
 {
-    [super onEnter];
+    [super onEnter];// Help !!!
     
     [self setupGrid];
     
@@ -72,8 +72,8 @@ static const int GRID_COLUMNS = 10;
 {
     //get the row and column that was touched, return the Creature inside the corresponding cell
     int _row = touchPosition.y/_cellHeight;
-    int _collumn = touchPosition.x/_cellWidth;
-    return _gridArray[_row][_collumn];
+    int _column = touchPosition.x/_cellWidth;
+    return _gridArray[_row][_column];
 }
 
 @end
